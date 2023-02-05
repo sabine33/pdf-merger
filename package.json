@@ -4,7 +4,7 @@
   "description": "",
   "main": "cli.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --coverage"
   },
   "bin": {
     "pdfmerge": "./cli.js"
@@ -15,5 +15,8 @@
   "dependencies": {
     "pdf-merger-js": "^4.2.0",
     "yargs": "^17.6.2"
+  },
+  "devDependencies": {
+    "jest": "^29.4.1"
   }
 }

@@ -1,11 +1,4 @@
-#!/usr/bin/env node
-const pdfMerger = require("./pdf");
-const {
-    getFilesInsideFolder,
-    sortFiles,
-    createFullPath,
-    createFileObjectFromFileNames,
-} = require("./fsUtils");
+const parser = require("./parser")
 
 const argv = require("yargs/yargs")(process.argv.slice(2))
     .usage(`
@@ -38,34 +31,9 @@ const argv = require("yargs/yargs")(process.argv.slice(2))
     })
     // .demandOption(["files"], "Please specify the files to convert")
     .help().
-    demandCommand().
+    // demandCommand().
     argv;
 
-(async () => {
-    let filesList = [];
-    //If folder argument is given.
-    if (argv.folder) {
-        //Get list of files inside a folder.
-        filesList = getFilesInsideFolder(argv.folder);
-        //Create full path for folder names
-        filesList = createFullPath({ folderName: argv.folder, files: filesList });
-        //Sort files based on alphanumeric order.
-        filesList = sortFiles(filesList);
-    }
-    //If files argument is given.
-    if (argv.files.length > 0) {
-        filesList = argv.files;
-    }
-    //create file object from file names
-    filesList = createFileObjectFromFileNames(filesList)
-
-    console.table(filesList)
-    //if output args is empty: default output file.
-    let outputFile = argv.output || "output.pdf";
-    if (filesList.length < 1) {
-        console.log("Empty files list.");
-        return;
-    }
-
-    await pdfMerger({ files: filesList, outputFile });
-})();
+(async (argv) => {
+    await parser(argv)
+})(argv);
