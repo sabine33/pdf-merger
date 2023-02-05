@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1675574928652" clover="3.2.0">
-  <project timestamp="1675574928652" name="All files">
+<coverage generated="1675575721192" clover="3.2.0">
+  <project timestamp="1675575721192" name="All files">
     <metrics statements="62" coveredstatements="46" conditionals="16" coveredconditionals="9" methods="10" coveredmethods="7" elements="88" coveredelements="62" complexity="0" loc="62" ncloc="62" packages="1" files="3" classes="3"/>
     <file name="fsUtils.js" path="/home/sabin/Desktop/pdf/fsUtils.js">
       <metrics statements="31" coveredstatements="20" conditionals="6" coveredconditionals="1" methods="8" coveredmethods="5"/>
@@ -38,23 +38,23 @@
     </file>
     <file name="parser.js" path="/home/sabin/Desktop/pdf/parser.js">
       <metrics statements="17" coveredstatements="14" conditionals="8" coveredconditionals="6" methods="1" coveredmethods="1"/>
-      <line num="2" count="1" type="stmt"/>
-      <line num="8" count="1" type="stmt"/>
-      <line num="11" count="1" type="stmt"/>
-      <line num="12" count="2" type="stmt"/>
-      <line num="14" count="2" type="cond" truecount="1" falsecount="1"/>
-      <line num="16" count="0" type="stmt"/>
-      <line num="18" count="0" type="stmt"/>
-      <line num="20" count="0" type="stmt"/>
-      <line num="23" count="2" type="cond" truecount="2" falsecount="0"/>
-      <line num="24" count="1" type="stmt"/>
-      <line num="27" count="2" type="stmt"/>
-      <line num="29" count="2" type="stmt"/>
-      <line num="31" count="2" type="cond" truecount="1" falsecount="1"/>
-      <line num="32" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
+      <line num="10" count="1" type="stmt"/>
+      <line num="11" count="2" type="stmt"/>
+      <line num="13" count="2" type="cond" truecount="1" falsecount="1"/>
+      <line num="15" count="0" type="stmt"/>
+      <line num="17" count="0" type="stmt"/>
+      <line num="19" count="0" type="stmt"/>
+      <line num="22" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="23" count="1" type="stmt"/>
+      <line num="26" count="2" type="stmt"/>
+      <line num="28" count="2" type="stmt"/>
+      <line num="30" count="2" type="cond" truecount="1" falsecount="1"/>
+      <line num="31" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="32" count="1" type="stmt"/>
       <line num="33" count="1" type="stmt"/>
-      <line num="34" count="1" type="stmt"/>
-      <line num="37" count="1" type="stmt"/>
+      <line num="36" count="1" type="stmt"/>
     </file>
     <file name="pdf.js" path="/home/sabin/Desktop/pdf/pdf.js">
       <metrics statements="14" coveredstatements="12" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>

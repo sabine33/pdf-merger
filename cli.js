@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const parser = require("./parser")
 
 const argv = require("yargs/yargs")(process.argv.slice(2))
@@ -31,7 +32,7 @@ const argv = require("yargs/yargs")(process.argv.slice(2))
     })
     // .demandOption(["files"], "Please specify the files to convert")
     .help().
-    // demandCommand().
+    demandCommand().
     argv;
 
 (async (argv) => {
