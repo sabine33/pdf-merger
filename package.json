@@ -1,18 +1,19 @@
 {
-  "name": "pdf",
+  "name": "pdfmerge",
   "version": "1.0.0",
   "description": "",
-  "main": "pdf.js",
+  "main": "cli.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "bin":{
-    "pdfmerge":"./cli.js"
+  "bin": {
+    "pdfmerge": "./cli.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "pdf-merger-js": "^4.2.0"
+    "pdf-merger-js": "^4.2.0",
+    "yargs": "^17.6.2"
   }
 }
