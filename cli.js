@@ -6,7 +6,6 @@ const {
     createFullPath,
     createFileObjectFromFileNames,
 } = require("./fsUtils");
-const path = require("path");
 
 const argv = require("yargs/yargs")(process.argv.slice(2))
     .usage(`
