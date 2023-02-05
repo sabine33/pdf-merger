@@ -12,6 +12,43 @@ const createFullPath = ({ folderName, files }) => {
     return files.map((filename) => path.join(folderName, filename));
 };
 
+
+/**
+ * Creates a file object from file names.
+ * @param {*} files 
+ * @returns 
+ */
+const createFileObjectFromFileNames = (files) => {
+    try {
+        let updatedFiles = []
+        for (let path of files) {
+            if (path.indexOf("#") > 0) {
+                let [filepath, pageNumbers] = path.split("#")
+                let pages = pageNumbers.split(",").map(page => +page)
+
+                if (pageNumbers && pages) {
+                    updatedFiles.push({
+                        path: filepath,
+                        pages: pages
+                    })
+                }
+            }
+            else {
+                updatedFiles.push({
+                    path,
+                    pages: null
+                })
+            }
+        }
+        return updatedFiles;
+    }
+    catch (ex) {
+        console.log(ex)
+        console.log("Unable to parse the input arguments.")
+        process.exit(1);
+    }
+}
+
 /**
  * Get files inside a particular folder.
  * @param {string} folderPath
@@ -40,4 +77,4 @@ const sortFiles = (files) => {
     return [...files].sort((a, b) => a.localeCompare(b, "en", { numeric: true }));
 };
 
-module.exports = { sortFiles, getFilesInsideFolder, createFullPath };
+module.exports = { sortFiles, getFilesInsideFolder, createFullPath, createFileObjectFromFileNames };

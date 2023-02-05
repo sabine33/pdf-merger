@@ -4,6 +4,7 @@ const {
     getFilesInsideFolder,
     sortFiles,
     createFullPath,
+    createFileObjectFromFileNames,
 } = require("./fsUtils");
 const path = require("path");
 
@@ -37,19 +38,30 @@ const argv = require("yargs/yargs")(process.argv.slice(2))
         default: []
     })
     // .demandOption(["files"], "Please specify the files to convert")
-    .help().argv;
+    .help().
+    demandCommand().
+    argv;
 
 (async () => {
     let filesList = [];
+    //If folder argument is given.
     if (argv.folder) {
+        //Get list of files inside a folder.
         filesList = getFilesInsideFolder(argv.folder);
+        //Create full path for folder names
         filesList = createFullPath({ folderName: argv.folder, files: filesList });
+        //Sort files based on alphanumeric order.
         filesList = sortFiles(filesList);
-        console.table(filesList)
     }
+    //If files argument is given.
     if (argv.files.length > 0) {
         filesList = argv.files;
     }
+    //create file object from file names
+    filesList = createFileObjectFromFileNames(filesList)
+
+    console.table(filesList)
+    //if output args is empty: default output file.
     let outputFile = argv.output || "output.pdf";
     if (filesList.length < 1) {
         console.log("Empty files list.");
