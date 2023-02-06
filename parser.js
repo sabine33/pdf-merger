@@ -12,7 +12,7 @@ module.exports = async ({ output, folder, files }) => {
     //If folder argument is given.
     if (folder) {
         //Get list of files inside a folder.
-        filesList = getFilesInsideFolder(argv.folder);
+        filesList = getFilesInsideFolder(folder);
         //Create full path for folder names
         filesList = createFullPath({ folderName: folder, files: filesList });
         //Sort files based on alphanumeric order.
