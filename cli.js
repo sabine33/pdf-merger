@@ -37,5 +37,9 @@ const argv =
         .help().argv;
 
 (async (argv) => {
+    if (!argv || (!argv.files || !argv.folder)) {
+        console.log("Please provide at least one source to merge.");
+        return;
+    }
     await parser(argv);
 })(argv);
