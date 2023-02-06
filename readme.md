@@ -5,26 +5,26 @@
 ## Installation
 
 ```sh
-npx pdfmerge --help
+npx merge-the-pdfs --help
 ```
 
 or
 
 - Clone the repo.
 - npm i && npm link
-- Open terminal & Enter pdfmerger.
+- Open terminal & Enter merge-the-pdfsr.
 
 ## Usage
 
 ```sh
-pdfmerge--folder < foldername > --files < file1 > <file2> --output <outputfile>
+merge-the-pdfs --folder < foldername > --files < file1 > <file2> --output <outputfile>
 ```
 
 ## Example
 
 ```sh
-pdfmerge --folder ~/Downloads/pdfs --output filename.pdf --files abc.pdf#1,2 apple.pdf#3,4
-pdfmerge --output filename.pdf --files abc.pdf#1,2 apple.pdf#3,4
+merge-the-pdfs --folder ~/Downloads/pdfs --output filename.pdf --files abc.pdf#1,2 apple.pdf#3,4
+merge-the-pdfs --output filename.pdf --files abc.pdf#1,2 apple.pdf#3,4
 
 ```
 
